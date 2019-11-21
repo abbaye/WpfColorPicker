@@ -1,0 +1,16 @@
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\bin\Debug\WpfColorPicker.Sample.CSharp.NET451.exe.config
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\bin\Debug\WpfColorPicker.Sample.CSharp.NET451.exe
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\bin\Debug\WpfColorPicker.Sample.CSharp.NET451.pdb
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\bin\Debug\ColorPicker.dll
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\obj\Debug\WpfColorPicker.Sample.NET451.csprojAssemblyReference.cache
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\obj\Debug\MainWindow.g.cs
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\obj\Debug\App.g.cs
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\obj\Debug\WpfColorPicker.Sample.CSharp.NET451_MarkupCompile.cache
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\obj\Debug\WpfColorPicker.Sample.CSharp.NET451_MarkupCompile.lref
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\obj\Debug\MainWindow.baml
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\obj\Debug\WpfColorPicker.Sample.CSharp.NET451.g.resources
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\obj\Debug\WpfColorPicker.Sample.CSharp.NET451.Properties.Resources.resources
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\obj\Debug\WpfColorPicker.Sample.NET451.csproj.GenerateResource.cache
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\obj\Debug\WpfColorPicker.Sample.NET451.csproj.CopyComplete
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\obj\Debug\WpfColorPicker.Sample.CSharp.NET451.exe
+C:\Users\Lenovo\Source\Repos\WpfColorPicker\Sources\Samples\WpfColorPicker.Sample.CSharp\obj\Debug\WpfColorPicker.Sample.CSharp.NET451.pdb

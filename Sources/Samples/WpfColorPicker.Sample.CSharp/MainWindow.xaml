@@ -1,0 +1,22 @@
+﻿<!--
+    2019 - Derek Tremblay (derektremblay666@gmail.com)
+    
+    Alpha version of sample...
+-->
+
+<Window
+    x:Class="WpfColorPicker.Sample.CSharp.NET451.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfColorPicker.Sample.CSharp.NET451"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:wcp="clr-namespace:WpfColorPicker.CustomControls;assembly=ColorPicker"
+    Title="Sample of Wpf ColorPicker control"
+    Width="800"
+    Height="450"
+    mc:Ignorable="d">
+    <Grid>
+        <wcp:ColorPicker Margin="10" />
+    </Grid>
+</Window>

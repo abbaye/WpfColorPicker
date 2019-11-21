@@ -1,0 +1,42 @@
+<!--
+    2006 - Microsoft / Sample
+    https://blogs.msdn.microsoft.com/wpfsdk/2006/10/26/uncommon-dialogs-font-chooser-color-picker-dialogs/
+    
+    2019 - Forked by Derek Tremblay (derektremblay666@gmail.com)
+-->
+
+<Window
+    x:Class="WpfColorPicker.CustomControls.ColorPickerDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:customControls="clr-namespace:WpfColorPicker.CustomControls"
+    Title="Select a Color"
+    Width="524"
+    Height="416">
+    <DockPanel>
+        <StackPanel
+            Margin="10"
+            HorizontalAlignment="Right"
+            DockPanel.Dock="Bottom"
+            Orientation="Horizontal">
+            <Button
+                x:Name="OKButton"
+                Width="60"
+                Height="26"
+                Click="OkButtonClicked"
+                Content="OK"
+                IsEnabled="False" />
+            <Button
+                Width="60"
+                Click="CancelButtonClicked"
+                Content="Cancel" />
+        </StackPanel>
+
+        <customControls:ColorPicker
+            x:Name="cPicker"
+            Margin="10,10,10,0"
+            SelectedColorChanged="onSelectedColorChanged" />
+    </DockPanel>
+
+
+</Window>
