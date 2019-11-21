@@ -4,7 +4,7 @@
 
 Wpf ColorPicker is a set of customs usercontrol that can take color in your app. 
 
-Forked from an old 2006 Microsoft sample project. I have adapted the code to be more actual and I will add somes other new colors picker from me.
+Forked base from an old 2006 Microsoft sample project. I have adapted the code to be more actual and I will add somes other new colors picker from me.
 
 I will add localisation, new features and controls like colorpicker combobox...
 
