@@ -53,7 +53,6 @@
         <EllipseGeometry RadiusX="4" RadiusY="4" />
     </GeometryGroup>
 
-
     <!--  Spectrum Slider Styles  -->
     <Style x:Key="SliderRepeatButtonStyle" TargetType="{x:Type RepeatButton}">
         <Setter Property="OverridesDefaultStyle" Value="true" />
@@ -336,10 +335,30 @@
     </Style>
     <!--  End Spectrum Slider  -->
 
+    
+    <!--<Style x:Key="{x:Type customControls:ComboBoxColorPicker}" TargetType="{x:Type ComboBox}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ComboBox}">
+                    <ControlTemplate.Resources>
+                        
+                    </ControlTemplate.Resources>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle
+                            Width="50"
+                            Margin="5,1,10,1"
+                            Fill="{TemplateBinding Name}" />
+                        <TextBlock Text="{TemplateBinding Name}" />
+                    </StackPanel>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+
 
 
     <!--  ColorPicker  Styles  -->
-
     <Style x:Key="{x:Type customControls:ColorPicker}" TargetType="{x:Type customControls:ColorPicker}">
         <Setter Property="Template">
             <Setter.Value>

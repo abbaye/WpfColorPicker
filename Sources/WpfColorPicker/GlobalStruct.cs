@@ -5,7 +5,7 @@
 // 2019 - Forked by Derek Tremblay (derektremblay666@gmail.com)
 //////////////////////////////////////////////
 
-namespace WpfColorPicker.CustomControls
+namespace WpfColorPicker
 {
     /// <summary>
     /// Describes a color in terms of Hue, Saturation, and Value (brightness)

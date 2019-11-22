@@ -45,12 +45,14 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColorPicker.cs">
+    <Compile Include="CustomControls\ColorPicker.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="ColorThumb.cs" />
-    <Compile Include="ColorUtilities.cs" />
-    <Compile Include="SpectrumSlider.cs" />
+    <Compile Include="CustomControls\ColorThumb.cs" />
+    <Compile Include="Core\ColorUtilities.cs" />
+    <Compile Include="CustomControls\ComboBoxColorPicker.cs" />
+    <Compile Include="CustomControls\SpectrumSlider.cs" />
+    <Compile Include="Enumeration.cs" />
     <Compile Include="GlobalStruct.cs">
       <SubType>Code</SubType>
     </Compile>

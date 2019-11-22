@@ -8,7 +8,7 @@
 using System.Windows;
 using System.Windows.Media;
 
-namespace WpfColorPicker.CustomControls
+namespace WpfColorPicker
 {
     /// <summary>
     /// ColorPickerDialog used to pick colors
