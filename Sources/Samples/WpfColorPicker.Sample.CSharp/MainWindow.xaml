@@ -19,6 +19,6 @@
     <Grid>
         <wcp:ColorPicker Margin="10,10,10,50" />
 
-        <wcp:ComboBoxColorPicker Height="20" Margin="26,389,525,10" />
+        <wcp:ColorPickerBox Height="25" Margin="26,0,525,10" VerticalAlignment="Bottom" />
     </Grid>
 </Window>

@@ -9,6 +9,7 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+    xmlns:converters="clr-namespace:WpfColorPicker.Converter"
     xmlns:customControls="clr-namespace:WpfColorPicker.CustomControls"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="PresentationOptions">
@@ -335,27 +336,47 @@
     </Style>
     <!--  End Spectrum Slider  -->
 
-    
-    <!--<Style x:Key="{x:Type customControls:ComboBoxColorPicker}" TargetType="{x:Type ComboBox}">
-        <Setter Property="Template">
+    <!--  ColorPickerBox Styles  -->
+    <Style BasedOn="{StaticResource {x:Type ComboBox}}" TargetType="{x:Type customControls:ColorPickerBox}">
+        <Style.Resources>
+            <converters:ColorToSolidBrushConverter x:Key="ColorToBrush" />
+        </Style.Resources>
+        <Setter Property="ItemContainerStyle">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ComboBox}">
-                    <ControlTemplate.Resources>
-                        
-                    </ControlTemplate.Resources>
-                    <StackPanel Orientation="Horizontal">
-                        <Rectangle
-                            Width="50"
-                            Margin="5,1,10,1"
-                            Fill="{TemplateBinding Name}" />
-                        <TextBlock Text="{TemplateBinding Name}" />
-                    </StackPanel>
+                <Style TargetType="ComboBoxItem">
+                    <!--<Style.Triggers>
+                        <DataTrigger Binding="{Binding Bold}" Value="True">
+                            <Setter Property="FontWeight" Value="Bold" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Italic}" Value="True">
+                            <Setter Property="FontStyle" Value="Italic" />
+                        </DataTrigger>
+                    </Style.Triggers>-->
 
-                </ControlTemplate>
+                    <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="True" />
+
+                    <Setter Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type ComboBoxItem}">
+                                <StackPanel Orientation="Horizontal">
+                                    <Border
+                                        Width="20"
+                                        Height="20"
+                                        Margin="5,0,0,0"
+                                        Background="{Binding Value, Converter={StaticResource ColorToBrush}}"
+                                        BorderBrush="Black"
+                                        BorderThickness="0.5" />
+
+                                    <Label Content="{Binding Key}" />
+                                </StackPanel>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
             </Setter.Value>
         </Setter>
-    </Style>-->
-
+    </Style>
+    <!--  End ColorPickerBox Styles  -->
 
 
     <!--  ColorPicker  Styles  -->
@@ -824,8 +845,5 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-
-
     <!--  End ColorPicker  -->
 </ResourceDictionary>

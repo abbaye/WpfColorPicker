@@ -1,9 +1,9 @@
-﻿<Application x:Class="WpfColorPicker.Sample.CSharp.NET451.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:WpfColorPicker.Sample.CSharp.NET451"
-             StartupUri="MainWindow.xaml">
-    <Application.Resources>
-         
-    </Application.Resources>
+﻿<Application
+    x:Class="WpfColorPicker.Sample.CSharp.NET451.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:customControls="clr-namespace:WpfColorPicker.CustomControls;assembly=ColorPicker"
+    xmlns:local="clr-namespace:WpfColorPicker.Sample.CSharp.NET451"
+    StartupUri="MainWindow.xaml">
+    <Application.Resources />
 </Application>
