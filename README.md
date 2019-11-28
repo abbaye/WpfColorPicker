@@ -14,6 +14,6 @@ Principal control form Microsoft 2006 Sample (I want to enchanced it soon)
 
 <img src="Images/Sample1.png?raw=true" />
 
-ColorPickerBox: Work in progress control...
+New ColorPickerBox: Work in progress control...
 
 <img src="Images/Sample2.png?raw=true" />
