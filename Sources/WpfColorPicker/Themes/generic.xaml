@@ -344,15 +344,6 @@
         <Setter Property="ItemContainerStyle">
             <Setter.Value>
                 <Style TargetType="ComboBoxItem">
-                    <!--<Style.Triggers>
-                        <DataTrigger Binding="{Binding Bold}" Value="True">
-                            <Setter Property="FontWeight" Value="Bold" />
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding Italic}" Value="True">
-                            <Setter Property="FontStyle" Value="Italic" />
-                        </DataTrigger>
-                    </Style.Triggers>-->
-
                     <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="True" />
 
                     <Setter Property="Control.Template">
