@@ -1,4 +1,9 @@
-﻿using System;
+﻿//////////////////////////////////////////////
+// MIT  - 2019
+// Author : Derek Tremblay (derektremblay666@gmail.com)
+//////////////////////////////////////////////
+
+using System;
 using System.Globalization;
 using System.Windows.Data;
 using System.Windows.Media;
@@ -13,6 +18,7 @@ namespace WpfColorPicker.Converter
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
             throw new NotImplementedException();
+            //return value.ToString();
         }
     }
 }
