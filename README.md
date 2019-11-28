@@ -9,4 +9,11 @@ Forked base from an old 2006 Microsoft sample project. I have adapted the code t
 I will add localisation, new features and controls like colorpicker combobox...
 
 ### 🖼 Screenshots
+
+Principal control form Microsoft 2006 Sample (I want to enchanced it soon)
+
 <img src="Images/Sample1.png?raw=true" />
+
+ColorPickerBox: Work in progress control...
+
+<img src="Images/Sample2.png?raw=true" />
