@@ -426,6 +426,7 @@ namespace WpfColorPicker.CustomControls
                 _ColorSlider = null;
             }
             base.OnTemplateChanged(oldTemplate, newTemplate);
+            
         }
         
         private void BaseColorChanged(object sender, RoutedPropertyChangedEventArgs<Double> e)

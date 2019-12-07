@@ -341,9 +341,19 @@
         <Style.Resources>
             <converters:ColorToSolidBrushConverter x:Key="ColorToBrush" />
         </Style.Resources>
+
+        <Setter Property="SnapsToDevicePixels" Value="true" />
+
         <Setter Property="ItemContainerStyle">
             <Setter.Value>
                 <Style TargetType="ComboBoxItem">
+
+                    <!--<Setter Property="Template">
+                        <Setter.Value>
+
+                        </Setter.Value>
+                    </Setter>-->
+
                     <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="True" />
 
                     <Setter Property="Control.Template">
@@ -780,56 +790,51 @@
                         </Grid>
                     </Border>
 
-
                     <ControlTemplate.Triggers>
+                        <Trigger SourceName="PART_ColorMarker" Property="IsMouseOver" Value="False">
+                            <Setter TargetName="PART_ColorMarker" Property="StrokeDashArray" Value="2,1" />
+                            <Setter TargetName="PART_ColorMarker" Property="Data" Value="{StaticResource FancyColorMarkerGeometry}" />
 
-                        <!--
-            <Trigger SourceName="PART_ColorMarker" Property="IsMouseOver" Value="False">
-              <Setter TargetName="PART_ColorMarker" Property="StrokeDashArray" Value="2,1" />
-              <Setter TargetName="PART_ColorMarker" Property="Data"
-                Value="{StaticResource FancyColorMarkerGeometry}">
-              </Setter>
+                            <Setter TargetName="PART_ColorMarker" Property="Fill">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="{Binding SelectedColor, RelativeSource={RelativeSource TemplatedParent}}" />
+                                </Setter.Value>
+                            </Setter>
 
-              <Setter TargetName="PART_ColorMarker" Property="Fill">
-                <Setter.Value>
-                  <SolidColorBrush
-                    Color="{Binding SelectedColor, RelativeSource={RelativeSource TemplatedParent}}" />
-                </Setter.Value>
-              </Setter>
+                            <Setter TargetName="PART_ColorMarker" Property="BitmapEffect">
+                                <Setter.Value>
+                                    <BitmapEffectGroup>
+                                        <BevelBitmapEffect />
+                                        <DropShadowBitmapEffect />
+                                    </BitmapEffectGroup>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
 
-              <Setter TargetName="PART_ColorMarker" Property="BitmapEffect">
-                <Setter.Value>
-                  <BitmapEffectGroup>
-                    <BevelBitmapEffect />
-                    <DropShadowBitmapEffect />
-                  </BitmapEffectGroup>
-                </Setter.Value>
-              </Setter>
-            </Trigger>
+                        <EventTrigger RoutedEvent="Path.Loaded" SourceName="PART_ColorMarker">
+                            <BeginStoryboard Name="markerBeginStoryboard">
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        RepeatBehavior="Forever"
+                                        Storyboard.TargetName="PART_ColorMarker"
+                                        Storyboard.TargetProperty="StrokeDashOffset"
+                                        From="0"
+                                        To="3" />
+                                    <ColorAnimation
+                                        AutoReverse="True"
+                                        RepeatBehavior="Forever"
+                                        Storyboard.TargetName="markerBrush"
+                                        Storyboard.TargetProperty="Color"
+                                        From="White"
+                                        To="Black"
+                                        Duration="0:0:1" />
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger>
 
-
-
-            <EventTrigger SourceName="PART_ColorMarker" RoutedEvent="Path.Loaded">
-              <BeginStoryboard Name="markerBeginStoryboard">
-                <Storyboard>
-                  <DoubleAnimation
-                    Storyboard.TargetName="PART_ColorMarker"
-                    Storyboard.TargetProperty="StrokeDashOffset"
-                    From="0" To="3" RepeatBehavior="Forever" />
-                  <ColorAnimation
-                    Storyboard.TargetName="markerBrush"
-                    Storyboard.TargetProperty="Color"
-                    From="White" To="Black"
-                    Duration="0:0:1" AutoReverse="True"
-                    RepeatBehavior="Forever" />
-                </Storyboard>
-              </BeginStoryboard>
-            </EventTrigger>
-
-            <EventTrigger SourceName="PART_ColorMarker" RoutedEvent="Path.Unloaded">
-              <RemoveStoryboard BeginStoryboardName="markerBeginStoryboard" />
-            </EventTrigger>
-                        -->
+                        <EventTrigger RoutedEvent="Path.Unloaded" SourceName="PART_ColorMarker">
+                            <RemoveStoryboard BeginStoryboardName="markerBeginStoryboard" />
+                        </EventTrigger>
 
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
