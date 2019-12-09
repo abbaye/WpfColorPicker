@@ -340,45 +340,39 @@
     <Style BasedOn="{StaticResource {x:Type ComboBox}}" TargetType="{x:Type customControls:ColorPickerBox}">
         <Style.Resources>
             <converters:ColorToSolidBrushConverter x:Key="ColorToBrush" />
+
+            <ControlTemplate x:Key="ColorPickerBoxItemTemplate" TargetType="{x:Type ComboBoxItem}">
+                <StackPanel Orientation="Horizontal">
+                    <Border
+                        Width="20"
+                        Height="20"
+                        Margin="5,0,0,0"
+                        Background="{Binding Value, Converter={StaticResource ColorToBrush}}"
+                        BorderBrush="Black"
+                        BorderThickness="0.5" />
+                    <Label Content="{Binding Key}" />
+                    <!--<ContentPresenter />-->
+                </StackPanel>
+            </ControlTemplate>
         </Style.Resources>
 
         <Setter Property="SnapsToDevicePixels" Value="true" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="ScrollViewer.CanContentScroll" Value="true" />
+        <Setter Property="MinWidth" Value="100" />
+        <Setter Property="MinHeight" Value="25" />
 
         <Setter Property="ItemContainerStyle">
             <Setter.Value>
                 <Style TargetType="ComboBoxItem">
-
-                    <!--<Setter Property="Template">
-                        <Setter.Value>
-
-                        </Setter.Value>
-                    </Setter>-->
-
                     <Setter Property="FrameworkElement.OverridesDefaultStyle" Value="True" />
-
-                    <Setter Property="Control.Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="{x:Type ComboBoxItem}">
-                                <StackPanel Orientation="Horizontal">
-                                    <Border
-                                        Width="20"
-                                        Height="20"
-                                        Margin="5,0,0,0"
-                                        Background="{Binding Value, Converter={StaticResource ColorToBrush}}"
-                                        BorderBrush="Black"
-                                        BorderThickness="0.5" />
-
-                                    <Label Content="{Binding Key}" />
-                                </StackPanel>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
+                    <Setter Property="Control.Template" Value="{DynamicResource ColorPickerBoxItemTemplate}" />
                 </Style>
             </Setter.Value>
         </Setter>
     </Style>
     <!--  End ColorPickerBox Styles  -->
-
 
     <!--  ColorPicker  Styles  -->
     <Style x:Key="{x:Type customControls:ColorPicker}" TargetType="{x:Type customControls:ColorPicker}">

@@ -20,8 +20,7 @@
         <wcp:ColorPicker Margin="10,10,10,50" />
 
         <wcp:ColorPickerBox
-            Height="25"
-            Margin="26,0,525,10"
-            VerticalAlignment="Bottom" />
+            Margin="26,0,598,10"
+            VerticalAlignment="Bottom" Height="5" />
     </Grid>
 </Window>
