@@ -11,7 +11,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:WpfColorPicker.Sample.CSharp.NET451"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:wcp="clr-namespace:WpfColorPicker.CustomControls;assembly=ColorPicker"
+    xmlns:wcp="clr-namespace:WpfColorPicker.CustomControls;assembly=WpfColorPicker"
     Title="Sample of Wpf ColorPicker control"
     Width="800"
     Height="450"
@@ -20,7 +20,8 @@
         <wcp:ColorPicker Margin="10,10,10,50" />
 
         <wcp:ColorPickerBox
+            Height="5"
             Margin="26,0,598,10"
-            VerticalAlignment="Bottom" Height="5" />
+            VerticalAlignment="Bottom" />
     </Grid>
 </Window>

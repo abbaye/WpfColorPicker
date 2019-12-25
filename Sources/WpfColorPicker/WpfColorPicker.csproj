@@ -1,79 +1,45 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="12.0">
-  <!-- MSBUILD Project File -->
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
   <PropertyGroup>
-    <DefaultClrNameSpace>Microsoft.Samples.ColorPickerExample</DefaultClrNameSpace>
-    <AssemblyName>ColorPicker</AssemblyName>
-    <TargetType>library</TargetType>
-    <Configuration>Release</Configuration>
-    <BuildSystem>MSBuild</BuildSystem>
-    <HostInBrowser>False</HostInBrowser>
-    <ProductVersion>8.0.50727</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{99E90579-62FC-4898-B168-24F7DBD3A34D}</ProjectGuid>
-    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <TargetFrameworks>netcoreapp3.0;net45;net47</TargetFrameworks>
+    <UseWPF>true</UseWPF>
     <RootNamespace>WpfColorPicker</RootNamespace>
-    <StartupObject>
-    </StartupObject>
-    <OutputType>Library</OutputType>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <UpgradeBackupLocation>
-    </UpgradeBackupLocation>
-    <OldToolsVersion>2.0</OldToolsVersion>
-    <TargetFrameworkProfile />
+    <AssemblyName>WpfColorPicker</AssemblyName>
+    <Title>WpfColorPicker user control</Title>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Authors>Derek Tremblay (derektremblay666@gmail.com)</Authors>
+    <Company>Derek Tremblay (derektremblay666@gmail.com)</Company>
+    <Description>
+      .NET FRAMEWORK 4.5/4.7 AND .NET CORE 3.0
+      Wpf ColorPicker is a set of customs usercontrol that can take color in your app.
+    </Description>
+    <PackageIconUrl />
+    <Product>WpfColorPicker</Product>
+    <Copyright>MIT</Copyright>
+    <AssemblyVersion>0.1.2</AssemblyVersion>
+    <FileVersion>0.1.2</FileVersion>
+    <Version>0.1.2</Version>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PackageTags>
+      wpf-colorpicker;colorpicker;color;picker;wpf-controls
+    </PackageTags>
+    <ApplicationIcon />
+    <LangVersion>preview</LangVersion>
+    <PackageProjectUrl>https://github.com/abbaye/WpfColorPicker</PackageProjectUrl>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DocumentationFile>
-    </DocumentationFile>
-    <CodeAnalysisRules>
-    </CodeAnalysisRules>
-    <Prefer32Bit>false</Prefer32Bit>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp3.0|AnyCPU'">
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
-  <!--Import the target file that contains all the common targets -->
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+
   <ItemGroup>
-    <!-- Aplication Definition Markup File -->
-    <Page Include="ColorPickerDialog.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Converter\ColorToSolidBrushConverter.cs" />
-    <Compile Include="CustomControls\ColorPicker.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="CustomControls\ColorThumb.cs" />
-    <Compile Include="Core\ColorUtilities.cs" />
-    <Compile Include="CustomControls\ColorPickerBox.cs" />
-    <Compile Include="CustomControls\SpectrumSlider.cs" />
-    <Compile Include="Enumeration.cs" />
-    <Compile Include="GlobalStruct.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ColorPickerDialog.xaml.cs">
-      <DependentUpon>ColorPickerDialog.xaml</DependentUpon>
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Data.Linq" />
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Xaml" />
-    <Reference Include="WindowsBase" />
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
-    <Reference Include="UIAutomationProvider" />
-    <Reference Include="UIAutomationTypes" />
-  </ItemGroup>
+    <None Include="license.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup> 
 </Project>

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29509.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfColorPicker", "WpfColorPicker\WpfColorPicker.csproj", "{99E90579-62FC-4898-B168-24F7DBD3A34D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfColorPicker", "WpfColorPicker\WpfColorPicker.csproj", "{99E90579-62FC-4898-B168-24F7DBD3A34D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfColorPicker.Sample.NET451", "Samples\WpfColorPicker.Sample.CSharp\WpfColorPicker.Sample.NET451.csproj", "{EB55D2E8-A2D7-4B61-953B-AB422AA62571}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfColorPicker.Sample", "Samples\WpfColorPicker.Sample.CSharp\WpfColorPicker.Sample.csproj", "{EB55D2E8-A2D7-4B61-953B-AB422AA62571}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
